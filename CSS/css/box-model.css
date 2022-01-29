@@ -108,7 +108,8 @@ Propiedad Display
 */
 
 .caja-none,
-.caja-linea-bloque {
+.caja-linea-bloque, 
+.caja-hidden {
   background-color: darkolivegreen;
   color: white;
   width: 600px;
@@ -124,5 +125,135 @@ Propiedad Display
   display: none;
 } 
 
+.caja-hidden {
+  visibility: hidden; 
+}
 
-/*6:18:00*/
+.overflow {
+  background-color: darkturquoise;
+  width: 200px;
+  height: 100px;
+  overflow: visible;
+  overflow: hidden;
+  overflow: scroll;
+  overflow: auto;
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll; */
+}
+
+/*
+Tamaño de Caja
+*/
+
+.box-sizing-content,
+.box-sizing-border {
+  background-color: deepskyblue;
+  box-sizing: content-box;
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+  border: thick solid black;
+  /* w 500px + pLeft 10 + pRight 10 + bLeft 5 + bRigth 5 = 530 */
+  /* h 250px + pTop 10 + pBottom 10 + bTop 5 + bBottom 5 = 280 */
+}
+
+.box-sizing-border {
+  box-sizing: border-box;
+}
+
+.container-col-3 {
+  background-color: burlywood;
+  width: 600px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.container-col-3 > * {
+  box-sizing: border-box;
+  width: 200px;
+  border: thin solid red;
+  padding: 10px;
+  float: left;
+}
+
+/*
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+apply a natural box layout model to all elements, but allowing components to change
+
+* Deberia ir al principio del documento.
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+/* Floats */
+
+.container-floats {
+  background-color: cornflowerblue;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Colapso de Márgenes Verticales
+  Recomendación: Siempre usar margin-top o margin-bottom, porque se usan ambos habra un colapso de margenes.
+*/
+
+.margin-collapse {
+  background-color: skyblue;
+}
+
+.margin-collapse section {
+  border: thin solid black;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.margin-collapse span {
+  border: thin solid black;
+  display: inline-block; 
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* Centrado de Cajas */
+
+.sitio-web {
+  border: thin solid black;
+  background-color: thistle;
+  width: 800px;
+  height: 1000px;
+  padding: 16px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 0 auto; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
