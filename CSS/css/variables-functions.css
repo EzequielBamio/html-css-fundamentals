@@ -1,0 +1,62 @@
+:root {
+    color: darkmagenta;
+    --primary-color: purple;
+    --font-size: 32px;
+    --bg-color-default: #20c997;
+}
+
+html {
+    color: red;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+.custom-props-1 {
+    /* --primary-color: gray;
+    --font-size: 32px; */
+    background-color: var(--primary-color);
+}
+
+.custom-props-2 {
+    background-color: var(--bg-color-default);
+    border: medium solid var(--border-color);
+    padding: 1rem;
+}
+
+.custom-props-3 {
+    font-size: var(--font-size);
+    border: medium solid var(--border-color);
+}
+
+.title-props {
+    /* --primary-color: navy; */
+    color: var(--primary-color, orange);
+    background-color: var(--bg-color-default);
+}
+
+.ch-10 {
+    --padding-size: 2ch;
+    --num-ch: 10ch;
+    background-color: var(--bg-color-default);
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc(var(--num-ch) + (var(--padding-size) * 2) );
+}
+
+.min-max {
+    background-color: var(--bg-color-default);
+    margin-top: 1rem;
+    width: min(300px, 20vw, 20rem);
+    height: max(200px, 25vh)
+}
+
+h1 {
+    font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}
+
+/* 4:00:00 */
