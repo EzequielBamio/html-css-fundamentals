@@ -88,4 +88,22 @@ background-attachment: define como se comportara la imagen de fondo al desplazar
     /* background: red; */
 }
 
-/* 6:51:00 */
+.bg-multiple {
+    width: 50%;
+    height: 30vh;
+    background-image: 
+    url('../assets/eb.png'),
+    url('../assets/img4.jpg');
+    background-repeat: repeat-x, no-repeat;
+    background-size: 10%, cover;
+}
+
+.bg-art {
+    width: 1000px;
+    height: 600px;
+    background: 
+    url('../assets/arbol.png') no-repeat center bottom,
+    url('../assets/aves.png')  no-repeat center bottom fixed,
+    url('../assets/cielo.png') no-repeat center top;
+}
+
