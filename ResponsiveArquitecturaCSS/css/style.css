@@ -134,3 +134,9 @@ iframe {
         background-color: lightgreen;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    html {
+        background-color: white;
+    }
+}
