@@ -140,3 +140,68 @@ iframe {
         background-color: white;
     }
 }
+
+@supports (grid-template-columns: subgrid) {
+    html {
+        background-color: black;
+        color: greenyellow;
+    }
+}
+
+@supports not (grid-template-columns: subgrid) {
+    html {
+        background-color: darkolivegreen;
+        color: white;
+    }
+}
+
+@supports (display: grid) and (grid-template-columns: subgrid) {
+    html {
+        background-color: darkslateblue;
+        color: lightseagreen;
+    }
+}
+
+@supports (display: grid) or (grid-template-columns: subgrid) {
+    html {
+        background-color: white;
+        color: black;
+    }
+}
+
+.card {
+    border: thin solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    contain: layout inline-size style;
+}
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+/* chrome://flags */
+
+@container (min-width: 600px) {
+    .card-container {
+      display: flex;
+    }
+
+    .card-container > * {
+        width: 50%;
+        flex-basis: 50%;
+    }
+
+    .card {
+      background-color:black;
+
+    }
+}
