@@ -205,3 +205,13 @@ iframe {
 
     }
 }
+
+.fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.fluid-item {
+    border: thin solid gray;
+    padding: 1rem;
+}
